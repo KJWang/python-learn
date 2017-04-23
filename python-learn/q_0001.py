@@ -5,7 +5,8 @@
 
 import random
 
-def method1(count,length):
+
+def generate(count,length):
     source = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     gifts = []
     while len(gifts) < count:
@@ -14,9 +15,8 @@ def method1(count,length):
             gift += random.choice(source)
         if gift not in gifts:
             gifts.append(gift)
+    return gifts
 
-p = method1(20,6)
-print(p)
 
 
 
